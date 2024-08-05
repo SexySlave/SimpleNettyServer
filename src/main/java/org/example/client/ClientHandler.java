@@ -21,7 +21,7 @@ public class ClientHandler extends ChannelInboundHandlerAdapter { // extends Cha
 
 
     @Override
-    public void channelRead(ChannelHandlerContext cxt, Object msg) throws Exception { // This function will be called when we receive whole packet
+    public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception { // This function will be called when we receive whole packet
         Packet packetIn = (Packet) msg; // here we convert Object msg to our Packet packetIn
         System.out.println("Server response:\n" + packetIn.getStringValue() + packetIn.getIntValue()); // here we print answer from server
     }
